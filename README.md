@@ -20,11 +20,11 @@ The recommended way to use this library is via [Composer](http://getcomposer.org
 To add this package as a local, per-project dependency to your project, simply add a
 dependency on `data-values/common` to your project's `composer.json` file.
 Here is a minimal example of a `composer.json` file that just defines a dependency on
-version 0.3 of this package:
+version 1.0 of this package:
 
     {
         "require": {
-            "data-values/common": "0.3.*"
+            "data-values/common": "^1.0.0"
         }
     }
 
@@ -36,17 +36,9 @@ via TravisCI, as a TravisCI configuration file is also provided in the root dire
 
 ### Running the tests
 
-For tests only
-
-    composer test
-
-For style checks only
-
-	composer cs
-
 For a full CI run
 
-	composer ci
+    composer test
 
 ## Authors
 
@@ -54,6 +46,15 @@ DataValues Common has been written by the Wikidata team, as [Wikimedia Germany](
 employees for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
+
+### 1.0.0 (dev)
+
+* Deprecated `newFromArray` in `MonolingualTextValue` and `MultilingualTextValue`.
+* Changed `MismatchingDataValueTypeException` not amending custom messages any more.
+* Updated the MediaWiki entry point to use the extension.json format.
+* Updated inline documentation throughout the code.
+* Updated minimal required PHP version from 5.3 to 5.5.9.
+* Dropped backwards compatibility with DataValues Interfaces 0.1.
 
 ### 0.3.1 (2015-08-14)
 
